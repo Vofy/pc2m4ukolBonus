@@ -53,7 +53,7 @@ int main( void)
 
 		for (x=0; x<76; x++)
 		{
-			y[x] = x * tan(ele) - 0.5 * g * pow(x, 2) * pow(1 / (vel * cos(ele)), 2);		// equation of throw
+			y[x] = x * tan(ele * pi / 180) - 0.5 * g * pow(x, 2) *  pow(1 / (vel * cos(ele * pi / 180)), 2);		// equation of throw
 			yv=floor(y[x]+0.5);
 			if ((yv>=0)&&(yv<=30))
 				disp[30-yv][x]='O';
